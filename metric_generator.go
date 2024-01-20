@@ -1,5 +1,4 @@
-// metrics/metric_generator.go
-package metrics
+package main
 
 import (
 	"fmt"
