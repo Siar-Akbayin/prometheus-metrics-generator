@@ -6,8 +6,8 @@ import (
 	"math/rand"
 )
 
-// Example of creating a gauge with variable cardinality
-func createGaugeWithCardinality(baseName string, maxCardinality int) prometheus.GaugeVec {
+// CreateGaugeWithCardinality Example of creating a gauge with variable cardinality
+func CreateGaugeWithCardinality(baseName string, maxCardinality int) prometheus.GaugeVec {
 	labelNames := make([]string, maxCardinality)
 	for i := 0; i < maxCardinality; i++ {
 		labelNames[i] = fmt.Sprintf("dim%d", i+1)
@@ -21,8 +21,8 @@ func createGaugeWithCardinality(baseName string, maxCardinality int) prometheus.
 	)
 }
 
-// Updating metrics with varying cardinality
-func updateGauge(gaugeVec prometheus.GaugeVec, maxCardinality int) {
+// UpdateGauge Updating metrics with varying cardinality
+func UpdateGauge(gaugeVec prometheus.GaugeVec, maxCardinality int) {
 	labelValues := make([]string, maxCardinality)
 	for i := 0; i < maxCardinality; i++ {
 		labelValues[i] = fmt.Sprintf("%d", i+1)
