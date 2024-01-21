@@ -1,5 +1,3 @@
-github.com/Siar-akbayin/prometheus-benchmarking/metrics v0.0.0-20240119184616-2689c988fa60 h1:Q9EwNdm7PElbsmI0Ue/QCakl39OhVp33UaK2QXsp1bU=
-github.com/Siar-akbayin/prometheus-benchmarking/metrics v0.0.0-20240119184616-2689c988fa60/go.mod h1:ohVmofYpRq34q7i2jTnjIxtha/seOaIvR0LN5DfjAJc=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
