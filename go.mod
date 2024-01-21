@@ -1,6 +1,6 @@
 module github.com/Siar-Akbayin/prometheus-metrics-generator
 
-go 1.21.5
+go 1.17
 
 require github.com/prometheus/client_golang v1.18.0
 
