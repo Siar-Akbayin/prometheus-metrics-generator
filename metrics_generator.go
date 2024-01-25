@@ -36,13 +36,13 @@ func CreateAndRegisterGauge(cardinality int) GaugeWithLabels {
 func UpdateGauge(gaugeWithLabels *GaugeWithLabels) {
 	labelValues := make([]string, len(gaugeWithLabels.labelNames))
 	for i := range labelValues {
-		labelValues[i] = fmt.Sprintf("%d", rand.Intn(100))
+		labelValues[i] = fmt.Sprintf("%d", i+1) // Assign sequential values to labels
 	}
 	gaugeWithLabels.gauge.WithLabelValues(labelValues...).Set(rand.Float64() * 100)
 	gaugeWithLabels.updateCount++
 }
 
-// Generates 5 gauge metrics with the cardinality 1-1000
+// Generates one gauge metric for each cardinality from 1 to 1000
 func main() {
 	const maxCardinality = 1000
 
@@ -56,7 +56,7 @@ func main() {
 			for i := 0; i < maxCardinality; i++ {
 				UpdateGauge(&gauges[i])
 			}
-			if gauges[maxCardinality-1].updateCount >= 5 {
+			if gauges[maxCardinality-1].updateCount >= 1 {
 				break
 			}
 			time.Sleep(100 * time.Millisecond)
