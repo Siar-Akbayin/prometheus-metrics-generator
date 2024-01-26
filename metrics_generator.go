@@ -38,13 +38,13 @@ func UpdateGauge(gaugeWithLabels *GaugeWithLabels) {
 	for i := range labelValues {
 		labelValues[i] = fmt.Sprintf("%d", i+1) // Assign sequential values to labels
 	}
-	gaugeWithLabels.gauge.WithLabelValues(labelValues...).Set(rand.Float64() * 100)
+	gaugeWithLabels.gauge.WithLabelValues(labelValues...).Set(rand.Float64() * 3000)
 	gaugeWithLabels.updateCount++
 }
 
-// Generates one gauge metric for each cardinality from 1 to 1000
+// Generates one gauge metric for each cardinality from 1 to 3000
 func main() {
-	const maxCardinality = 1000
+	const maxCardinality = 3000
 
 	gauges := make([]GaugeWithLabels, maxCardinality)
 	for i := 1; i <= maxCardinality; i++ {
